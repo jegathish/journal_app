@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HompageBackgroud extends StatelessWidget {
   const HompageBackgroud({Key? key}) : super(key: key);
@@ -6,31 +8,33 @@ class HompageBackgroud extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
-        color: Color(0xFFFFFFFFF),
-        height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        color: Colors.white,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Container(
-            //     child: Wrap(
-            //         // alignment: WrapAlignment(),
-            //         children: [
-            //       SvgPicture.asset(
-            //         "assets/icons/circle_bg.svg",
-            //         // height: 1800,
-            //         // width: 1800,
-            //         alignment: Alignment.topRight,
-            //       )
-            //     ])),
-            // Container(
-            //   child: Text('hello'),
-            // )
-          ],
-        ),
-      ),
-    );
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                alignment: Alignment.topLeft,
+                child: SizedBox(
+                  width: 275,
+                  height: 275,
+                  child: SvgPicture.asset(
+                    "assets/icons/home_top_bg.svg",
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ),
+              Container(
+                  alignment: Alignment.bottomCenter,
+                  // padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                  child: SizedBox(
+                      width: 380,
+                      height: 258.81,
+                      child: SvgPicture.asset(
+                        "assets/icons/home_bottom_bg.svg",
+                        fit: BoxFit.fill,
+                      ))),
+            ]));
   }
 }
