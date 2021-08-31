@@ -27,7 +27,6 @@ class HompageBackgroud extends StatelessWidget {
               ),
               Container(
                   alignment: Alignment.bottomCenter,
-                  // padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                   child: SizedBox(
                       width: 380,
                       height: 258.81,

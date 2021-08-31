@@ -60,12 +60,12 @@ class _HomePageBodyState extends State<HomePageBody> {
     new JournalDetail("Trip to Tokyo", "March 21, 2019", "assets/tokyo_bg.jpeg",
         "Tokyo comes to life at night. The best places to experience nightlife in Tokyo are shinjuku, shibuya, Ginza Roppongi and Tokyo Tower. In Tokyo comes to life at night. The best places to experience nightlife in Tokyo are shinjuku, shibuya, Ginza Roppongi and Tokyo Tower. In Tokyo comes to life at night. The best places to experience nightlife in Tokyo are shinjuku, shibuya, Ginza Roppongi and Tokyo Tower. In Tokyo comes to life at night. The best places to experience nightlife in Tokyo are shinjuku, shibuya, Ginza Roppongi and Tokyo Tower. In Tokyo"),
     new JournalDetail("Tokyo City", "March 21, 2019", "assets/tokyo_bg_1.png",
-        "Tokyo comes to life at night. The best places to experience nightlife in Tokyo are shinjuku, shibuya, Ginza Roppongi and Tokyo Tower. In Tokyo comes to life at night. The best places to experience nightlife in Tokyo are shinjuku, shibuya, Ginza Roppongi and Tokyo Tower. In Tokyo comes to life at night. The best places to experience nightlife in Tokyo are shinjuku, shibuya, Ginza Roppongi and Tokyo Tower. In Tokyo comes to life at night. The best places to experience nightlife in Tokyo are shinjuku, shibuya, Ginza Roppongi and Tokyo Tower. In Tokyo"),
+        "The site of Tokyo has been inhabited since ancient times; the small fishing village of Edo existed there for centuries. Edo’s development into a city did not occur until the Tokugawa period (1603–1867), when it became the capital of the Tokugawa shogunate. During this period, however, the imperial family remained in Kyōto, the ancient imperial capital. With the Meiji Restoration of 1868, which ended the shogunate, the capital was moved to Edo. The city was renamed Tokyo, meaning “eastern capital.” Edo had been Japan’s largest city since the 17th century. Tokyo’s population exceeded one million in the late 19th century, and as Japan’s political, economic, and cultural centre it became one of the world’s most populous cities in the 20th century."),
     new JournalDetail(
         "Tokyo Culture",
         "March 21, 2019",
         "assets/tokyo_bg_2.png",
-        "The cultural side of Tokyo is famous for its numerous things to do and top attractions, including museums; festivals; internationally noted cuisine; and professional sports clubs, including baseball, football, and traditional Japanese pursuits like sumo wrestling.")
+        "Tokyo is Japan’s major cultural centre. Displays depicting the art and history of Japan and Asia are featured at the Tokyo National Museum in Ueno Park. Ueno Park is also the site of a science museum, a zoological garden, and two major art museums. Art and science museums are located close to the Imperial Palace, and museums of various types are located elsewhere in the city. Theatrical works, including everything from traditional Kabuki to modern drama, are performed regularly, as are symphonic works, operas, and other Western forms of dance and music. The University of Tokyo heads a long list of major universities and colleges in the metropolitan area.Tokyo is the chief transportation hub for Japan, as well as an important international traffic centre. It is served by a dense network of electric railways, subways, bus lines, and highways. Tokyo station is the central railroad terminal for all of Japan, including the high-speed Shinkansen bullet trains from western Japan. Ueno Station is the terminus for rail lines running to northern Japan, and Shinjuku station is the terminus for trains from central Honshu and Tokyo’s western suburbs. Several privately owned electric rail lines provide interurban transit service. Tokyo’s international airport is at Narita, in Chiba prefecture, while the city’s Haneda airport on the bay provides domestic service. Area 240 square miles (621 square km). Pop. (2005) 8,489,653; (2010) 8,945,695.")
   ];
 
   setJournal(widthSize, heightSize) {
@@ -93,8 +93,7 @@ class _HomePageBodyState extends State<HomePageBody> {
                       height: 25,
                     )),
                 Container(
-                  height: heightSize / 100 * 48,
-                  padding: EdgeInsets.fromLTRB(12, 0, 0, 0),
+                  padding: EdgeInsets.fromLTRB(12, 0, 0, 50),
                   alignment: Alignment.bottomLeft,
                   child: Container(
                       child: Text(
@@ -108,8 +107,7 @@ class _HomePageBodyState extends State<HomePageBody> {
                   )),
                 ),
                 Container(
-                  height: heightSize / 100 * 51,
-                  padding: EdgeInsets.fromLTRB(12, 0, 0, 0),
+                  padding: EdgeInsets.fromLTRB(12, 0, 0, 25),
                   alignment: Alignment.bottomLeft,
                   child: Container(
                       child: Text(
@@ -177,7 +175,8 @@ class _HomePageBodyState extends State<HomePageBody> {
                         autoPlayCurve: Curves.easeIn,
                         enableInfiniteScroll: true,
                         autoPlayAnimationDuration: Duration(milliseconds: 800),
-                        viewportFraction: 0.7,
+                        viewportFraction: .7,
+                        // pageSnapping: true,
                       ),
                     ))),
             Container(

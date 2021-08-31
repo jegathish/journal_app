@@ -171,7 +171,7 @@ class _JournalPageState extends State<JournalPage>
                       )
                     ])),
                     Container(
-                        padding: EdgeInsets.fromLTRB(15, 20, 5, 10),
+                        padding: EdgeInsets.fromLTRB(15, 10, 5, 5),
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -183,20 +183,24 @@ class _JournalPageState extends State<JournalPage>
                                       height: 1)),
                               Container(
                                   child: Row(children: [
-                                SvgPicture.asset(
-                                  "assets/icons/Expand_left.svg",
-                                  height: 20,
-                                  color: Color(0xFF818899),
-                                ),
-                                Text(
-                                  "Swipe up to Read",
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 13,
-                                      letterSpacing: .1,
-                                      // fontWeight: FontWeight.bold,
+                                Container(
+                                    margin: EdgeInsets.fromLTRB(0, 15, 7, 0),
+                                    child: SvgPicture.asset(
+                                      "assets/icons/up_arrow.svg",
+                                      height: 18,
                                       color: Color(0xFF818899),
-                                      height: 1),
-                                )
+                                    )),
+                                Container(
+                                    margin: EdgeInsets.fromLTRB(0, 5, 3, 0),
+                                    child: Text(
+                                      "Swipe up to Read",
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 12,
+                                          letterSpacing: .1,
+                                          // fontWeight: FontWeight.bold,
+                                          color: Color(0xFF818899),
+                                          height: 1),
+                                    ))
                               ]))
                             ])),
                     Container(
