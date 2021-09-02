@@ -197,7 +197,6 @@ class _JournalPageState extends State<JournalPage>
                                       style: GoogleFonts.poppins(
                                           fontSize: 12,
                                           letterSpacing: .1,
-                                          // fontWeight: FontWeight.bold,
                                           color: Color(0xFF818899),
                                           height: 1),
                                     ))
@@ -205,15 +204,18 @@ class _JournalPageState extends State<JournalPage>
                             ])),
                     Container(
                         padding: EdgeInsets.fromLTRB(15, 0, 20, 0),
-                        child: Text(
-                          widget.details,
-                          style: GoogleFonts.poppins(
-                              fontSize: 16,
-                              color: Color(0xFF818899),
-                              height: 1.5,
-                              letterSpacing: .3,
-                              fontWeight: FontWeight.w500),
-                        ))
+                        child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              widget.details,
+                              style: GoogleFonts.poppins(
+                                  fontSize: 16,
+                                  color: Color(0xFF818899),
+                                  height: 1.5,
+                                  letterSpacing: .3,
+                                  fontWeight: FontWeight.w500),
+                              textAlign: TextAlign.justify,
+                            )))
                   ],
                 ),
               )),
